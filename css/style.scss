@@ -1,0 +1,632 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i');
+/*variables*/
+$color1:rgb(225, 75, 100);
+$color2:rgb(250, 245, 100);
+$color3:rgb(100, 200, 240);
+$color4:rgb(200, 250, 150);
+$color5:rgb(245, 140, 205);
+
+$fontset: 'nunito',
+sans-serif;
+
+
+$breekpunt1:1200px;
+$breekpunt2:992px;
+$breekpunt3:768px;
+$breekpunt4:576px;
+
+
+/*typografie*/
+h1 {
+  font-family: $fontset;
+  font-size: 70px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 10%;
+
+  @media (max-width: $breekpunt1) {
+    font-size: 50px;
+  }
+
+  @media (max-width: $breekpunt3) {
+    font-size: 35px;
+  }
+
+  @media (max-width: $breekpunt4) {
+    font-size: 25px;
+  }
+}
+
+h2 {
+  font-family: $fontset;
+  font-size: 35px;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: lighter;
+
+  @media (max-width: $breekpunt2) {
+    font-size: 30px;
+  }
+
+  @media (max-width: $breekpunt3) {
+    font-size: 25px;
+  }
+
+  @media (max-width: $breekpunt4) {
+    font-size: 20px;
+  }
+}
+
+h3 {
+  font-family: $fontset;
+  font-size: 25px;
+  text-transform: uppercase;
+  font-weight: lighter;
+
+  @media (max-width: $breekpunt2) {
+    font-size: 18px;
+  }
+}
+
+h3.lightblue {
+  position: relative;
+  display: inline-block;
+
+  span::after {
+    display: inline-block;
+    position: absolute;
+    content: "";
+    z-index: -1;
+    border-top: 0.5rem solid $color3;
+    width: 100%;
+    left: 0px;
+    bottom: 6px;
+  }
+}
+
+h3.yello {
+  position: relative;
+  display: inline-block;
+
+  span::after {
+    display: inline-block;
+    position: absolute;
+    content: "";
+    z-index: -1;
+    border-top: 0.5rem solid $color2;
+    width: 100%;
+    left: 0px;
+    bottom: 6px;
+  }
+}
+
+h3.greenn {
+  position: relative;
+  display: inline-block;
+
+  span::after {
+    display: inline-block;
+    position: absolute;
+    content: "";
+    z-index: -1;
+    border-top: 0.5rem solid $color4;
+    width: 100%;
+    left: 0px;
+    bottom: 6px;
+  }
+}
+
+h3.pinkk {
+  position: relative;
+  display: inline-block;
+
+  span::after {
+    display: inline-block;
+    position: absolute;
+    content: "";
+    z-index: -1;
+    border-top: 0.5rem solid $color5;
+    width: 100%;
+    left: 0px;
+    bottom: 6px;
+  }
+}
+
+p {
+  font-family: $fontset;
+  font-weight: lighter;
+  font-size: 16px;
+
+
+  @media (max-width: $breekpunt2) {
+    font-size: 12px;
+  }
+}
+
+.inleiding p {
+  font-size: 20px;
+
+  @media (max-width: $breekpunt3) {
+    font-size: 14px;
+  }
+}
+.groeneachtergrond{
+  background-color:$color4;
+  padding:20px;
+  margin:20px;
+}
+.groendik{
+  font-weight:bold;
+  text-transform: uppercase;
+  position: relative;
+  display: inline-block;
+}
+/*homepage*/
+.cardimage img {
+  height: 200px;
+  margin-top: 3000px;
+
+  @media (max-width: $breekpunt3) {
+    display: none;
+  }
+
+}
+
+.cardimage2 img {
+  height: 200px;
+  margin-top: 10px;
+
+  @media (max-width: $breekpunt3) {
+    display: none;
+  }
+}
+
+.inleiding {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.cardimage {
+  animation: MoveUpDown 3s linear infinite;
+  position: absolute;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+
+}
+
+.cardimage2 {
+  animation: MoveUpDown2 3s linear infinite;
+  position: absolute;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+
+}
+
+@keyframes MoveUpDown {
+
+  0%,
+  100% {
+    bottom: 0;
+  }
+
+  50% {
+    bottom: 25px;
+  }
+}
+
+@keyframes MoveUpDown2 {
+
+  0%,
+  100% {
+    bottom: 50px;
+  }
+
+  25% {
+    bottom: 75px;
+  }
+}
+
+/*navigatie*/
+nav {
+  overflow: hidden;
+}
+
+.nav-link {
+  padding-right: 1em !important;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-family: 'Nunito', sans-serif;
+}
+
+.nav-item1 a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  font-size: 17px;
+  border-bottom: 3px solid transparent;
+}
+
+.nav-item1 a:hover {
+  border-bottom: 3px solid $color1;
+  margin-bottom: -1px;
+}
+
+.nav-item2 a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  font-size: 17px;
+  border-bottom: 3px solid transparent;
+}
+
+.nav-item2 a:hover {
+  border-bottom: 3px solid $color3;
+  margin-bottom: -1px;
+}
+
+.nav-item3 a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  font-size: 17px;
+  border-bottom: 3px solid transparent;
+}
+
+.nav-item3 a:hover {
+  border-bottom: 3px solid $color2;
+  margin-bottom: -1px;
+}
+
+.nav-item4 a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  font-size: 17px;
+  border-bottom: 3px solid transparent;
+}
+
+.nav-item4 a:hover {
+  border-bottom: 3px solid $color4;
+  margin-bottom: -1px;
+}
+
+.nav-item5 a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  font-size: 17px;
+  border-bottom: 3px solid transparent;
+}
+
+.nav-item5 a:hover {
+  border-bottom: 3px solid $color5;
+}
+
+/*foto's*/
+
+.foto {
+  margin-left: 50px;
+  position: relative;
+
+}
+
+.foto img {
+  height: 300px;
+  width: auto;
+  transform: rotate(-10deg);
+
+  @media (max-width: $breekpunt3) {
+    height: 250px;
+  }
+}
+
+.foto2 {
+  position: relative;
+
+  @media (max-width: $breekpunt3) {
+    display: none;
+  }
+}
+
+.foto2 img {
+  height: 300px;
+  width: auto;
+}
+
+.foto3 {
+  position: relative;
+  margin-top: 40%;
+}
+
+.foto3 img {
+  height: 400px;
+  width: auto;
+  transform: rotate(-10deg);
+}
+
+/*tekst*/
+.tekst {
+  text-align: left;
+  margin-top: 75px;
+
+}
+
+/*confetti*/
+.wrapper {
+  position: relative;
+  min-height: 100vh;
+}
+
+[class|="confetti"] {
+  position: absolute;
+}
+
+.red {
+  background-color: $color1;
+}
+
+.yellow {
+  background-color: $color2;
+}
+
+.blue {
+  background-color: $color3;
+}
+
+.green {
+  background-color: $color4;
+}
+
+.pink {
+  background-color: $color5;
+}
+
+/*foto*/
+.lotgenoten {
+  margin-top: 200px;
+}
+
+.card {
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+.card .image {
+  width: 100%;
+  overflow: hidden;
+
+
+}
+
+.card .image img {
+  width: 100%;
+  transition: .5s;
+
+}
+
+.card:hover .image img {
+  opacity: .5;
+  transform: translateX(30%);
+}
+
+.card .details {
+  position: absolute;
+  width: 70%;
+  height: 100%;
+  background: $color2;
+  transition: .5s;
+  transform-origin: left;
+  transform: perspective(2000px) rotateY(-90deg);
+}
+
+.card:hover .details {
+  transform: perspective(2000px) rotateY(0deg);
+}
+
+.card .details .center {
+  padding: 20px;
+  text-align: center;
+  background: $color2;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.card .details .center h3 {
+  font-size: 18px;
+  font-family: 'Nunito', sans-serif;
+  text-transform: uppercase;
+}
+
+.card .details .center h3 span {
+  font-size: 14px;
+  font-family: 'Nunito', sans-serif;
+  text-transform: uppercase;
+}
+
+.card .details .center p {
+  font-size: 12px;
+  font-family: 'Nunito', sans-serif;
+
+  @media (max-width: $breekpunt1) {
+    font-size:10px;
+  }  
+}
+
+/*formulieren*/
+.inschrijfformulier {
+  margin-top: 5%;
+  padding:5%;
+}
+
+input {
+  width: 100%;
+  margin: 20px 0;
+  border: none;
+}
+input[type=tekstcontact]:focus {
+  border: none;
+}
+.geelformulier {
+  border-bottom: 2px solid $color2;
+}
+
+.groenformulier {
+  border-bottom: 2px solid $color4;
+}
+
+.rozeformulier {
+  border-bottom: 2px solid $color5;
+}
+
+::-webkit-input-placeholder {
+  color: black;
+  font-family: 'Nunito', sans-serif;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+#msg {
+  margin-top: 100px;
+}
+
+/*buttons*/
+.doneren {
+  margin-top: 10%;
+}
+
+.button {
+  padding: 5px 5px;
+  border: none;
+  text-transform: uppercase;
+  font-family: 'Nunito', sans-serif;
+  margin-top: 5px;
+}
+
+a.buttongeel {
+  display: block;
+  background-color: $color2;
+  line-height: 54px;
+  padding: 0 20px;
+  text-align: center;
+  cursor: pointer;
+}
+
+a.buttongroen {
+  display: block;
+  background-color: $color4;
+  padding: 5px 5px;
+  text-align: center;
+  cursor: pointer;
+}
+
+a.buttonroze {
+  display: block;
+  background-color: $color5;
+  padding: 5px 5px;
+  text-align: center;
+  cursor: pointer;
+}
+
+/*crowdfunding*/
+
+#countdown-wrap {
+  width: 100%;
+  height: 50px;
+  ;
+  //border: 1px solid black;
+  padding: 20px;
+  font-family: 'nunito', sans-serif;
+  text-transform: uppercase;
+  max-width: 1050px;
+  margin: 100px auto 300px;
+}
+
+#goal {
+  font-size: 48px;
+  text-align: left;
+  color: black;
+
+  @media (max-width: $breekpunt3) {
+    text-align: center;
+    font-size: 35px;
+  }
+}
+
+#glass {
+  width: 100%;
+  height: 20px;
+  background: #c7c7c7;
+}
+
+#progress {
+  width: 16%;
+  height: 20px;
+  background: $color5;
+  z-index: 333;
+}
+
+.goal-stat {
+  width: 25%;
+  padding: 10px;
+  float: left;
+  margin: 0;
+
+  @media (max-width: $breekpunt3) {
+    text-align: center;
+    width: 50%;
+  }
+}
+
+.goal-number,
+.goal-label {
+  display: block;
+}
+
+.goal-number {
+  font-weight: bold;
+}
+
+/*footer*/
+footer.foeter{
+  position:fixed;
+  display:flex;
+  justify-content:space-between;
+  padding:0 25px;
+  bottom:0px;
+  width:100%;
+  height:40px;
+  background-color:black;
+  color:white;
+  font-family:$fontset;
+  text-transform: uppercase;
+}
+.midden{
+ margin-left:45%;
+ font-size:1em;
+ line-height:45px;
+
+ @media (max-width: $breekpunt3) {
+  margin-left:35%;
+}
+@media (max-width: $breekpunt4) {
+  margin-left:30%;
+  font-size:0.7em;
+}
+}
